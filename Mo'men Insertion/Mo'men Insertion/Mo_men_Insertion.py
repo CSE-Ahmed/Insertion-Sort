@@ -25,22 +25,3 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
     return Comparisons, shifts
-
-
-# Main function to test the insertion sort implementation
-N = 50
-data = random.sample(range(1, 1001), N)  # Generate a list of N unique random integers between 1 and 1000
-
-print("Before sortng:") # Print the original unsorted list
-print(data)
-
-start = time.perf_counter() # Start the timer for performance measurement
-comparisons, shifts = insertion_sort(data)
-end = time.perf_counter()
-
-print("\nAfter sorting:")
-print(data)
-print("\nComparisons:", comparisons)
-print("Shifts:", shifts)
-print(f"Time: {end - start:.6f} seconds")
-print("Sorted correctly?", data == sorted(data))
